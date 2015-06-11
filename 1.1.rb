@@ -12,7 +12,7 @@ str_array = str.split("")
 
 #(a)
 
-def find_unique_with_data_structures str, str_array 
+def find_unique_with_data_structures str_array 
   puts "using method with data structures..."
   if str_array.each.find {|e| str_array.count(e) > 1 }
     puts "string has non unique characters"
