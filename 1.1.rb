@@ -32,5 +32,5 @@ def find_unique_without_data_structures str
   end
 end
 
-find_unique_with_data_structures str, str_array
+find_unique_with_data_structures str
 find_unique_without_data_structures str
