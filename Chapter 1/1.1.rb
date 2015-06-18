@@ -11,8 +11,7 @@ puts "random string of random length = " + str
 str_array = str.split("")
 
 #(a)
-
-def find_unique_with_data_structures str, str_array 
+def find_unique_with_data_structures str_array 
   puts "using method with data structures..."
   if str_array.each.find {|e| str_array.count(e) > 1 }
     puts "string has non unique characters"
@@ -22,7 +21,6 @@ def find_unique_with_data_structures str, str_array
 end
 
 #(b)
-
 def find_unique_without_data_structures str
   puts "\nusing method without data structures..."
   if str.each_char.find { |c| str.count(c) > 1 } 
@@ -32,5 +30,5 @@ def find_unique_without_data_structures str
   end
 end
 
-find_unique_with_data_structures str, str_array
+find_unique_with_data_structures str_array
 find_unique_without_data_structures str
