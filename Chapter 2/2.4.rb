@@ -1,6 +1,6 @@
 =begin
   Cracking The Coding Interview
-  Chapter 2, Problem 2.4, page 75
+  Chapter 2, Problem 2.4, page 77
   Write code to partition a linked list around a value x, such
   that all nodes less than x come before all nodes greater than x.
 =end

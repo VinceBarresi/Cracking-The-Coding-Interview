@@ -1,6 +1,6 @@
 =begin
   Cracking The Coding Interview
-  Chapter 2, Problem 2.5, page 75
+  Chapter 2, Problem 2.5, page 77
   You have two numbers represented by a linked list, where
   each node contains a single digit. The digits are stored
   in reverse order, such that the 1's digit is at the head 

@@ -1,6 +1,6 @@
 =begin
   Cracking The Coding Interview
-  Chapter 2, Problem 2.1, page 75
+  Chapter 2, Problem 2.1, page 77
   Write code to remove duplicates from singly linked list.
   FOLLOW UP: 
   How would you solve this problem if a temporary buffer is

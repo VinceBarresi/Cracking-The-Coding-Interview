@@ -1,6 +1,6 @@
 =begin
   Cracking The Coding Interview
-  Chapter 2, Problem 2.1, page 75
+  Chapter 2, Problem 2.1, page 77
   Write an algorithm to remove the kth element from a 
   singly linked list.
 =end

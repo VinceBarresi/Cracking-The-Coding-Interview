@@ -97,6 +97,21 @@ class LinkedList
         puts full_list.reverse.join('->')
     end
 
+    def check_if_palindrome
+        current = @head
+        full_list = []
+        while current.next_node != nil
+            full_list += [current.value.to_s]
+            current = current.next_node
+        end
+        full_list += [current.value.to_s]
+        if full_list == full_list.reverse
+            puts 'List is a Palindrome'
+        else
+            puts 'List is not a Palindrome'
+        end
+    end
+
     def list_reverse_to_int
         # Traverse through the list till you hit the "nil" at the end
         current = @head
