@@ -60,13 +60,9 @@ value_two = second_list.list_reverse_to_int
 
 sum = value_one + value_two
 
-arr = sum.to_s.split(//)
-
-length = arr.size
-
 sum_list = LinkedList.new(nil)
 
-arr.each {|n| sum_list.add(n) }
+sum.to_s.split(//).each {|n| sum_list.add(n) }
 
 puts 'Sum of reversed lists as a list:'
 
