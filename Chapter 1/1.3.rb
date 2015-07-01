@@ -5,10 +5,10 @@
   permuatation of the other
 =end
 
-str_one = "abbb" #P = str_one.length!
+str_one = "abbb" 
 str_two = "bbba"
  
-p str_one.split("").t
+p str_one.split("").to_s
 
 def swap_characters x, y
   temp = x
@@ -16,31 +16,15 @@ def swap_characters x, y
   y = temp
 end
 
-# def check_permutation str_one, str_two
-
-# void print(char *a, int i, int n) {
-#     int j;
-#     if(i == n) {
-#         printf("%s\n", a);
-#     } else {
-#         for(j = i; j <= n; j++) {
-#             swap(a + i, a + j);
-#             print(a, i + 1, n);
-#             swap(a + i, a + j);
-#         }
-#     }
-# }
-
-
-  # while i <= str_one.length do
-  #   permutations[i] = str_one.reverse
-
-
-  # end
-    
-
-  
-
-
-
-# end
+def print *a, i, n
+  i, j = 0
+  if i == n 
+    puts "\n"a
+  else
+    while j <= n
+      swap_characters a + i, a + j
+      puts a.to_s + (i + 1).to_s +  n.to_s
+      swap_characters a + i, a + j
+    end
+  end
+end
