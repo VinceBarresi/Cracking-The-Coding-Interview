@@ -37,8 +37,20 @@ class LinkedList
         end
     end
     
-    def delete_kth list
+    def delete_rand_kth list
         x = rand(10)
+        puts 'removing ' + x.to_s + 'kth element from LinkedList'
+        i = 1
+        current = @head
+        until i == x - 1 && current.next_node != nil 
+            current = current.next_node
+            i += 1
+        end
+        current.next_node = (current.next_node).next_node
+    end
+
+    def delete_kth kth, list
+        x = kth
         puts 'removing ' + x.to_s + 'kth element from LinkedList'
         i = 1
         current = @head
@@ -59,6 +71,42 @@ class LinkedList
         end
         full_list += [current.value.to_s]
         puts full_list.join('->')
+    end
+
+    def list_to_int
+        # Traverse through the list till you hit the "nil" at the end
+        current = @head
+        full_list = [] 
+        while current.next_node != nil 
+            full_list += [current.value.to_s]
+            current = current.next_node
+        end
+        full_list += [current.value.to_s]
+        full_list.join('').to_i
+    end
+
+    def display_reverse_list
+        # Traverse through the list till you hit the "nil" at the end
+        current = @head
+        full_list = []
+        while current.next_node != nil 
+            full_list += [current.value.to_s]
+            current = current.next_node
+        end
+        full_list += [current.value.to_s]
+        puts full_list.reverse.join('->')
+    end
+
+    def list_reverse_to_int
+        # Traverse through the list till you hit the "nil" at the end
+        current = @head
+        full_list = [] 
+        while current.next_node != nil 
+            full_list += [current.value.to_s]
+            current = current.next_node
+        end
+        full_list += [current.value.to_s]
+        full_list.reverse.join('').to_i
     end
 
 end

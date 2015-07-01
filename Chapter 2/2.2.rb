@@ -25,7 +25,7 @@ rand_arr.each {|n| list.add(n) }
 puts "Displaying Linked List:"
 list.display
 
-list.delete_kth list
+list.delete_rand_kth list
 
 puts "\n"
 
