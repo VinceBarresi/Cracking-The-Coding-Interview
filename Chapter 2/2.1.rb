@@ -12,8 +12,7 @@ require_relative 'linked_list.rb'
 
 puts 'Creating LinkedList of 10 Node elements with random values'
 
-nd = Node.new(1)
-list = LinkedList.new(nd)
+list = LinkedList.new(10)
 
 rand_arr = Array.new
 i = 0
@@ -23,16 +22,31 @@ while i < 9
   i += 1
 end
 
-rand_arr.each {|n| list.insert(Node.new(n)) }
+rand_arr.each {|n| list.add(n) }
 
-puts 'Current values contained in LinkedList:'
-list.print
+puts "Displaying Linked List:"
+list.display
 
 puts "\n"
-puts 'Iterating through LinkedList and removes duplicates'
+puts 'Iterating through LinkedList and remove duplicates'
 
-new_nd = Node.new(1)
-new_list = LinkedList.new(new_nd)
+rand_arr = Array.new
+i = 0
+
+while i < 9
+  rand_arr[i] = rand(10)
+  i += 1
+end
+
+rand_arr.each {|n| list.add(n) }
+
+puts 'Current values contained in LinkedList:'
+list.display
+
+puts "\n"
+puts 'Iterating through LinkedList and remove duplicates'
+
+new_list = LinkedList.new(10)
 new_rand_arr = rand_arr.uniq
-new_rand_arr.each {|x| new_list.insert(Node.new(x))}
-new_list.print
+new_rand_arr.each {|x| new_list.add(x) }
+new_list.display
