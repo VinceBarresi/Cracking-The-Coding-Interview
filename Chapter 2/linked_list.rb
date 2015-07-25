@@ -6,8 +6,7 @@ class LinkedList
     end
     
     def add value
-        # Traverse to the end of the list
-        # And insert a new node over there with the specified value
+        # Traverse the list and add a new node with passed in value
         current = @head
         while current.next_node != nil
             current = current.next_node
@@ -23,9 +22,8 @@ class LinkedList
             @head = @head.next_node
         else
             # ... x -> y -> z
-            # Suppose y is the value to be deleted, you need to reshape the above list to :
             #   ... x->z
-            # ( and z is basically y.next_node )
+            # need to link x -> z if y is deleted..
             current = @head
             while (current != nil) && (current.next_node != nil) && ((current.next_node).value != val)
                 current = current.next_node
@@ -62,7 +60,6 @@ class LinkedList
     end
     
     def display
-        # Traverse through the list till you hit the "nil" at the end
         current = @head
         full_list = [] 
         while current.next_node != nil 
@@ -74,7 +71,6 @@ class LinkedList
     end
 
     def list_to_int
-        # Traverse through the list till you hit the "nil" at the end
         current = @head
         full_list = [] 
         while current.next_node != nil 
@@ -86,7 +82,6 @@ class LinkedList
     end
 
     def display_reverse_list
-        # Traverse through the list till you hit the "nil" at the end
         current = @head
         full_list = []
         while current.next_node != nil 
@@ -113,7 +108,6 @@ class LinkedList
     end
 
     def list_reverse_to_int
-        # Traverse through the list till you hit the "nil" at the end
         current = @head
         full_list = [] 
         while current.next_node != nil 
