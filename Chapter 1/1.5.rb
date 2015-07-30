@@ -12,19 +12,15 @@
 #if we want to generate a random string of random length
 #str = (0...rand(26)).map { (65 + rand(26)).chr }.join
 
-str = 'aabcccccaaa'
-
 def compress_string str
-  arr_str = str.split("")
-  index = 0
-  count = 0
-  last_char = arr_str[0]
-  new_str = ""
+  arr_str = str.split('')
+  index, count = 0, 0
+  last_char, new_str = arr_str[0], ''
   arr_str.each do |e|
     if e == last_char
       count += 1
     else
-      new_str += last_char + "" + count.to_s
+      new_str += last_char + '' + count.to_s
       last_char = arr_str[index]
       count = 1
     end
@@ -38,4 +34,4 @@ def compress_string str
   end
 end
 
-compress_string str
+compress_string 'aabcccccaaa'
