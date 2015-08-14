@@ -37,7 +37,7 @@ class AnimalShelter
   end
 
   def dequeue_any
-    if @oldest_animal != nil
+    if @oldest_animal && @current_animals != nil
       @oldest_animal == :cat ? dequeue_cat : dequeue_dog
       @current_animals.pop
       @oldest_animal = @current_animals[0]
