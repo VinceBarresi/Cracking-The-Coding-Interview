@@ -2,7 +2,7 @@ class LinkedList
   def initialize val
     # init a new node at the head
     @head = Node.new(val, nil)
-    end
+  end
     
   def add value
     # traverse the list and add a new node with passed in value
@@ -34,6 +34,8 @@ class LinkedList
   end
     
   def delete_rand_kth list
+    # add method to get list and generate random based on size!
+    # ***
     x = rand(10)
     puts 'removing ' + x.to_s + 'kth element from LinkedList'
     i = 1
