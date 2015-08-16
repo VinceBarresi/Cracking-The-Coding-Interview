@@ -25,4 +25,8 @@ rand_arr.each {|n| list.add(n) }
 puts "Displaying Linked List:"
 list.display
 
-list.check_if_palindrome
+list.is_palindrome?
+
+def check_if_palindrome list
+  list.is_palindrome?
+end
