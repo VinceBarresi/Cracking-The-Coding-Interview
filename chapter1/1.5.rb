@@ -24,14 +24,14 @@ def compress_string str
       last_char = arr_str[index]
       count = 1
     end
-    index += 1
+  index += 1
   end
   compressed_str = new_str + last_char + count.to_s
   if compressed_str.length < str.length
-    p compressed_str
+    return compressed_str
   else
-    p str
+    return str
   end
 end
 
-compress_string 'aabcccccaaa'
+p compress_string 'aabcccccaaa'
