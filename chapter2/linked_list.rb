@@ -67,7 +67,18 @@ class LinkedList
       current = current.next_node
     end
     full_list += [current.value.to_s]
-    puts full_list.join('->')
+    join_list full_list
+  end
+
+  def join_list list 
+    i = 1
+    while i <= list.size - 1
+      if i % 2 == 0
+        list.insert(i, '->')
+      end
+      i += 1
+    end
+    list.join
   end
 
   def list_to_int
@@ -89,10 +100,10 @@ class LinkedList
       current = current.next_node
     end
     full_list += [current.value.to_s]
-    puts full_list.reverse.join('->')
+    full_list.reverse.join('->')
   end
 
-  def check_if_palindrome
+  def is_palindrome?
     current = @head
     full_list = []
     while current.next_node != nil
@@ -100,11 +111,7 @@ class LinkedList
       current = current.next_node
     end
     full_list += [current.value.to_s]
-    if full_list == full_list.reverse
-      puts 'List is a Palindrome'
-    else
-      puts 'List is not a Palindrome'
-    end
+    full_list == full_list.reverse ? true : false
   end
 
   def list_reverse_to_int
