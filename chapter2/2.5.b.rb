@@ -25,39 +25,48 @@
 require_relative 'linked_list'
 require_relative 'node'
 
-puts 'Creating LinkedList of 10 Node elements with random values'
+# puts 'Creating LinkedList of 10 Node elements with random values'
 
-first_list = LinkedList.new(3)
-first_rand_arr = Array.new
-second_list = LinkedList.new(3)
-second_rand_arr = Array.new
+# first_list = LinkedList.new(3)
+# first_rand_arr = Array.new
+# second_list = LinkedList.new(3)
+# second_rand_arr = Array.new
 
-i = 0
+# i = 0
 
-while i < 2
-  first_rand_arr[i] = rand(10)
-  second_rand_arr[i] = rand(10)
-  i += 1
+# while i < 2
+#   first_rand_arr[i] = rand(10)
+#   second_rand_arr[i] = rand(10)
+#   i += 1
+# end
+
+# first_rand_arr.each {|n| first_list.add(n) }
+# second_rand_arr.each {|n| second_list.add(n) }
+
+# puts 'Displaying First Linked List:'
+# first_list.display
+
+# puts 'Displaying Second Linked List:'
+# second_list.display
+
+# value_one = first_list.list_to_int
+# value_two = second_list.list_to_int
+
+# sum = value_one + value_two
+
+# sum_list = LinkedList.new(nil)
+
+# sum.to_s.split(//).each {|n| sum_list.add(n) }
+
+# puts 'Sum of reversed lists as a list:'
+
+# sum_list.display
+
+def sum_of_lists list1, list2
+  value_one = list1.list_to_int
+  value_two = list2.list_to_int
+  sum = value_one + value_two
+  sum_list = LinkedList.new(nil)
+  sum.to_s.split(//).each {|n| sum_list.add(n) }
+  sum_list.display
 end
-
-first_rand_arr.each {|n| first_list.add(n) }
-second_rand_arr.each {|n| second_list.add(n) }
-
-puts 'Displaying First Linked List:'
-first_list.display
-
-puts 'Displaying Second Linked List:'
-second_list.display
-
-value_one = first_list.list_to_int
-value_two = second_list.list_to_int
-
-sum = value_one + value_two
-
-sum_list = LinkedList.new(nil)
-
-sum.to_s.split(//).each {|n| sum_list.add(n) }
-
-puts 'Sum of reversed lists as a list:'
-
-sum_list.display
