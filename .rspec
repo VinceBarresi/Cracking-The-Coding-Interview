@@ -1,0 +1,5 @@
+--color
+
+--default-path /spec/
+--pattern **/*spec.rb
+
