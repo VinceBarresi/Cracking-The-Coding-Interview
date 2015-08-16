@@ -12,7 +12,6 @@ str_array = str.split("")
 
 #(a)
 def find_unique_with_data_structures? str_array 
-  puts "using method with data structures..."
   if str_array.each.find {|e| str_array.count(e) > 1 }
     return false
   else
@@ -22,7 +21,6 @@ end
 
 #(b)
 def find_unique_without_data_structures? str
-  puts "\nusing method without data structures..."
   if str.each_char.find { |c| str.count(c) > 1 } 
     return false
   else
