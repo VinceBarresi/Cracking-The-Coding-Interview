@@ -9,10 +9,19 @@
   operation in place.)
 =end
 
-str = 'please replace all of the spaces in this string             ' 
-
 def replace_spaces str
-  p str.gsub(" ", "%20")
+  str.gsub(" ", "%20")
 end
 
-replace_spaces str
+def replace_spaces_without_library str
+  str = str.split("")
+  str.size.times do |i|
+    if str[i] == " "
+      str[i] = "%20"
+    end
+  end
+  str.join
+end
+
+p replace_spaces 'please replace all of the spaces in this string             '
+p replace_spaces_without_library 'hello world'
