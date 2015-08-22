@@ -5,7 +5,7 @@
   singly linked list.
 =end
 
-require_relative 'node'
+require_relative 'list_node'
 require_relative 'linked_list'
 
 puts 'Creating LinkedList of 10 Node elements with random values'

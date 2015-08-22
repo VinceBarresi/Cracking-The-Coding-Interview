@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 require_relative '../chapter2/linked_list'
-require_relative '../chapter2/node'
+require_relative '../chapter2/list_node'
 require_relative '../chapter2/2.5.b'
 
 describe 'sum of lists' do

@@ -6,7 +6,7 @@
 =end
 
 require_relative 'linked_list'
-require_relative 'node'
+require_relative 'list_node'
 
 puts 'Creating LinkedList of 10 Node elements with random values'
 

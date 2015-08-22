@@ -1,7 +1,7 @@
 class LinkedList
   def initialize val
     # init a new node at the head
-    @head = Node.new(val, nil)
+    @head = ListNode.new(val, nil)
   end
     
   def add value
@@ -10,7 +10,7 @@ class LinkedList
     while current.next_node != nil
       current = current.next_node
     end 
-    current.next_node = Node.new(value, nil)
+    current.next_node = ListNode.new(value, nil)
     self    
   end
 
