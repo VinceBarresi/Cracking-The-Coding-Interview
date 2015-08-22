@@ -2,26 +2,18 @@ require File.expand_path("../graph_node", __FILE__)
 
 # Directed Graph
 class Graph
-  attr_accessor :nodes, :edges
+  attr_accessor :nodes
   
   # initialize graph object with
-  # arrays to hold nodes and edges
+  # an array to hold nodes
   def initialize
     @nodes = []
-    @edges = []
   end
 
   # displays all nodes in the graph
   def display_nodes
-    nodes.size.times do |i|
+    @nodes.size.times do |i|
       p nodes[i]
-    end
-  end
-
-  # displays all edges in the graph
-  def display_edges
-    edges.size.times do |i|
-      p edges[i]
     end
   end
 
@@ -35,6 +27,5 @@ class Graph
   def add_edges source_node, destination_node
     return if source_node.adjacent_nodes.include?(destination_node)
     source_node.adjacent_nodes << destination_node
-    edges << destination_node
   end
 end
