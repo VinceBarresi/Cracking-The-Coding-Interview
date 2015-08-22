@@ -7,8 +7,8 @@
   not allowed.
 =end
 
-require_relative 'node.rb'
-require_relative 'linked_list.rb'
+require_relative 'node'
+require_relative 'linked_list'
 
 puts 'Creating LinkedList of 10 Node elements with random values'
 

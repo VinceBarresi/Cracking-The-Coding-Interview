@@ -22,8 +22,9 @@
 
 # Second Example
 
-require_relative 'linked_list'
 require_relative 'node'
+require_relative 'linked_list'
+
 
 # puts 'Creating LinkedList of 10 Node elements with random values'
 
