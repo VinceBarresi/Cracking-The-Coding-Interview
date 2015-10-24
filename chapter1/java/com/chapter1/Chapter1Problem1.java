@@ -8,7 +8,7 @@
 import java.util.HashMap;
 
 // (a)
-// O(n)
+// O(n^2)
 public class Chapter1Problem1 {
   public Boolean stringHasUniqueCharacters(String string) {
     HashMap<Character, Integer> charFreq = new HashMap<Character, Integer>();
