@@ -16,6 +16,6 @@ class BinarySearchTree
       elsif val > current_node.value && current_node.right == nil 
         push_right_side(val)
 	current_node = current_node.right
-      end
     end
+  end
 end
