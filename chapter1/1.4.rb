@@ -15,11 +15,7 @@ end
 
 def replace_spaces_without_library str
   str = str.split("")
-  str.size.times do |i|
-    if str[i] == " "
-      str[i] = "%20"
-    end
-  end
+  str.size.times {|i| str[i] = "%20" if str[i] == " "}
   str.join
 end
 
