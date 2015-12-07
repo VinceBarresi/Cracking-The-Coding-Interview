@@ -8,25 +8,7 @@
 require_relative 'linked_list'
 require_relative 'list_node'
 
-puts 'Creating LinkedList of 10 Node elements with random values'
-
-list = LinkedList.new(3)
-rand_arr = Array.new
-
-i = 0
-
-while i < 3
-  rand_arr[i] = rand(10)
-  i += 1
-end
-
-rand_arr.each {|n| list.add(n) }
-
-puts "Displaying Linked List:"
-list.display
-
-list.is_palindrome?
-
-def check_if_palindrome list
+def check_if_palindrome
+	list = gen_random_list
   list.is_palindrome?
 end
