@@ -5,9 +5,7 @@ class MyQueue
   end
 
   def move_stack_content
-    while !@in_stack.empty?
-      @out_stack.push(@in_stack.pop)
-    end
+    @out_stack.push(@in_stack.pop) while !@in_stack.empty?
   end
 
   def enqueue value
