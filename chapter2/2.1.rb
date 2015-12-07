@@ -18,5 +18,3 @@ def remove_duplicates_from_singly_linked_list
   new_list = LinkedList.new(list.size)
   new_rand_arr.each {|x| new_list.add(x)}
 end
-
-remove_duplicates_from_singly_linked_list
