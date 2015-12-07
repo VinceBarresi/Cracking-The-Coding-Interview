@@ -8,13 +8,13 @@ describe 'check if palindrome' do
     list = LinkedList.new(1)
     list.add(2)
     list.add(1)
-    expect(check_if_palindrome(list)).to be_truthy
+    expect(is_palindrome?(list)).to be_truthy
   end
 
   it 'returns false if a linked list is not a palindrome' do
     list = LinkedList.new(7)
     list.add(6)
     list.add(5)
-    expect(check_if_palindrome(list)).to be_falsy
+    expect(is_palindrome?(list)).to be_falsy
   end
 end
