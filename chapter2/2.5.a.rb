@@ -30,4 +30,3 @@ def sum_of_reverse_lists list1, list2
   sum_list = LinkedList.new(nil)
   sum.to_s.split(//).each {|n| sum_list.add(n)}
 end
-
