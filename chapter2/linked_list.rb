@@ -14,15 +14,15 @@ class LinkedList
     self    
   end
 
-  def delete val
+  def delete value
     current = @head
-    if current.value == val
+    if current.value == value
       # update head if its to be deleted
       @head = @head.next_node
     else
-    # ... x -> y -> z
-    #   ... x->z
-    # need to link x -> z if y is deleted..
+    # x -> y -> z
+    # x-> z
+    # need to link x -> z if y is deleted
     current = @head
     while (current != nil) && (current.next_node != nil) && ((current.next_node).value != val)
       current = current.next_node
@@ -35,7 +35,6 @@ class LinkedList
     
   def delete_rand_kth list
     # add method to get list and generate random based on size!
-    # ***
     x = rand(10)
     puts 'removing ' + x.to_s + 'kth element from LinkedList'
     i = 1
@@ -123,5 +122,16 @@ class LinkedList
     end
     full_list += [current.value.to_s]
     full_list.reverse.join('').to_i
+  end
+
+  def size
+    current = @head
+    full_list = []
+    while current.next_node != nil 
+      full_list += [current.value.to_s]
+      current = current.next_node
+    end
+    full_list += [current.value.to_s]
+    full_list.size
   end
 end
