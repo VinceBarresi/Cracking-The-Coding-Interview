@@ -15,9 +15,6 @@ class MyQueue
   end
 
   def dequeue 
-    if @out_stack.empty?
-      move_stack_content
-    end
+    move_stack_content if @out_stack.empty?
     @out_stack.pop
-  end
 end
