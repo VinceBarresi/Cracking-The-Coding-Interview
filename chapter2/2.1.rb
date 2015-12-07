@@ -9,44 +9,14 @@
 
 require_relative 'list_node'
 require_relative 'linked_list'
+require_relative '../helpers'
 
-puts 'Creating LinkedList of 10 Node elements with random values'
-
-list = LinkedList.new(10)
-
-rand_arr = Array.new
-i = 0
-
-while i < 9
-  rand_arr[i] = rand(10)
-  i += 1
+def remove_duplicates_from_singly_linked_list
+  list = gen_random_list(10)
+  rand_arr = gen_random_array(10)
+  new_rand_arr = rand_arr.uniq
+  new_list = LinkedList.new(list.size)
+  new_rand_arr.each {|x| new_list.add(x)}
 end
 
-rand_arr.each {|n| list.add(n) }
-
-puts "Displaying Linked List:"
-list.display
-
-puts "\n"
-puts 'Iterating through LinkedList and remove duplicates'
-
-rand_arr = Array.new
-i = 0
-
-while i < 9
-  rand_arr[i] = rand(10)
-  i += 1
-end
-
-rand_arr.each {|n| list.add(n) }
-
-puts 'Current values contained in LinkedList:'
-list.display
-
-puts "\n"
-puts 'Iterating through LinkedList and remove duplicates'
-
-new_list = LinkedList.new(10)
-new_rand_arr = rand_arr.uniq
-new_rand_arr.each {|x| new_list.add(x) }
-new_list.display
+remove_duplicates_from_singly_linked_list
