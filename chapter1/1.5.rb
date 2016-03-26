@@ -27,11 +27,7 @@ def compress_string str
   index += 1
   end
   compressed_str = new_str + last_char + count.to_s
-  if compressed_str.length < str.length
-    return compressed_str
-  else
-    return str
-  end
+  compressed_str.length < str.length ? compressed_str : str
 end
 
 p compress_string 'aabcccccaaa'
