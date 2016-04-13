@@ -2,10 +2,12 @@ require_relative 'tree_node'
 
 # BST
 class BinarySearchTree
+  
   # initialize root node
   def initialize val
     @root = TreeNode.new(val)
   end
+  
   # values lesser than root will be inserted as a left child
   # values greater than root will be inserted as a right child
   def push val
