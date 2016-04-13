@@ -1,5 +1,5 @@
 class EmptyNode
-	def to_a
-		[]
-	end
+  def to_a
+    []
+  end
 end
