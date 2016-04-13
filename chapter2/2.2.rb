@@ -9,6 +9,6 @@ require_relative 'list_node'
 require_relative 'linked_list'
 
 def delete_random_kth
-	list = gen_random_list
-	delete_rand_kth list
+  list = gen_random_list
+  delete_rand_kth list
 end
