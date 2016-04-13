@@ -14,18 +14,18 @@ def depth array
 end
 
 def gen_random_list list_size
-	list = LinkedList.new(list_size)
-	rand_arr = gen_random_array(list_size)
-	rand_arr.each { |n| list.add(n) }
-	list
+  list = LinkedList.new(list_size)
+  rand_arr = gen_random_array(list_size)
+  rand_arr.each { |n| list.add(n) }
+  list
 end
 
 def gen_random_array arr_size
-	rand_arr = Array.new
-	i = 0
-	while i < arr_size - 1
-  	rand_arr[i] = rand(arr_size)
-  	i += 1
-	end
-	rand_arr
+  rand_arr = Array.new
+  i = 0
+  while i < arr_size - 1
+    rand_arr[i] = rand(arr_size)
+    i += 1
+  end
+  rand_arr
 end
