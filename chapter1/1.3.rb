@@ -8,8 +8,6 @@
 str_one = "abbb" 
 str_two = "bbba"
  
-p str_one.split("").to_s
-
 def swap_characters x, y
   temp = x
   x = y
