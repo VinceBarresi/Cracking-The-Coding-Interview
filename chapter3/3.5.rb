@@ -8,11 +8,6 @@
 require_relative 'my_queue'
 
 my_queue = MyQueue.new
-
-5.times do
-  p my_queue.enqueue(rand(10))
-end
-
-p my_queue.dequeue
-
-p my_queue
+5.times { my_queue.enqueue(rand(10)) }
+my_queue.dequeue
+my_queue
